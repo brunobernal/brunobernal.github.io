@@ -20,7 +20,7 @@ header {
     margin-left: 20px;
     margin-top: 20px;
     position: fixed;
-    background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,0.5),rgba(255,255,255,0.8), rgba(255,255,255,0.98),rgba(255,255,255,0.98), rgba(255,255,255,0.8),rgba(255,255,255,0.5), rgba(255,255,255,0));
+    background-image: linear-gradient(to top, rgba(255,255,255,0),rgba(255,255,255,0.1),rgba(255,255,255,0.2),rgba(255,255,255,0.3),rgba(255,255,255,0.4), rgba(255,255,255,0.5),rgba(255,255,255,0.6),rgba(255,255,255,0.7),rgba(255,255,255,0.8), rgba(255,255,255,0.80),rgba(255,255,255,0.80), rgba(255,255,255,0.8),rgba(255,255,255,0.7),rgba(255,255,255,0.6),rgba(255,255,255,0.5),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0.2), rgba(255,255,255,0.1), rgba(255,255,255,0));
 }
 
 header ul a {
@@ -28,22 +28,24 @@ header ul a {
     height: 100%;
     text-align: center;
     margin: 40px auto;
-    
-    
+    transition: font-size 1s, transform 0.2s, color 2s;
+      
+}
+
+header ul a:hover {
+    color: black;
+    font-weight: bold;
+    text-decoration: overline;
+    font-size: 1.3rem;
+    transform: rotate(5deg);
+      
 }
 
 a:link, a:visited {
     color: #363636;
     
-
-
   }
   
-a:hover {
-    color: black;
-    font-weight: bold;
-    text-decoration: overline;
-  }
   
 
 a:active {
@@ -58,7 +60,23 @@ a:active {
 .logo a {
     float: left;
     padding: 25px 50px;
+    transition: transform 1s, color 1s;
 }
+
+.logo a:hover {
+    color: #363636;
+    transform: rotateY(180deg);
+}
+
+.second {
+    position: relative;
+    color: rgba(80, 67, 60, 0.349);
+    bottom: 54px;
+    transform: rotateY(180deg);
+    right: 20px; 
+    z-index: 1;
+}
+
 
 .flags {
     width: 30%;
@@ -70,10 +88,17 @@ a:active {
 
 .flags a {
     margin-left: 10px;
+    
+}
+
+.flags a img{
+    transition: transform 0.5s;
 }
 
 .flags a img:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: rotate(360deg) ;
+    
 }
 
 header ul {
@@ -120,19 +145,24 @@ section {
     grid-area: 3 / 3 / span 6 / span 4;
     font-size: 5rem;
     font-weight: bolder;
+    transition: font-size 1s;
+
 }
 
 .home h1:hover {
    color: black;
+   font-size: 5.2rem;
 }
 
 .home > p {
     grid-area: 8 / 3 / span 1 / span 4;
     font-size: 1.2rem;
+    transition: font-size 1s;
 }
 
 .home > p:hover {
     color: black;
+    font-size: 1.4rem;
 }
 
 .home .profilePicture {
@@ -143,9 +173,14 @@ section {
 .home .profilePicture img {
     border-radius: 50%;
     border: 5px solid #363636;
+    width: 100%;
+    transition: width 2s, border-radius 2s;
 }
 .home .profilePicture img:hover {
     border-color: black;
+    width: 110%;
+    border-radius: 0%;
+
 }
 
 .home span {
@@ -156,6 +191,7 @@ section {
     z-index: -1;
 }
 
+
 .home footer {
     grid-area: 11 / 2 / span 1 / span 10;
 
@@ -163,17 +199,78 @@ section {
 
 .home footer a {
     margin: 20px;
+    
+    
 }
 
 .home footer a:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 50%;
+    
 }
 
 .about {
     grid-area: 2 / 1 / span 1 / span 12;
+    display: grid;
+    grid-template: repeat(20, 1fr) /  repeat(5, 1fr);
+    grid-gap: 10px;
 }
 
+.about .card {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.about .card > p {
+    margin-top: 10px;
+}
+
+#card1 {
+    grid-area: 3 / 1 / span 7 / span 1;
+    align-items: center;
+}
+
+#card2 {
+    grid-area: 3 / 2 / span 7 / span 1;
+    align-items: center;
+}
+
+#card3 {
+    grid-area: 3 / 3 / span 7 / span 1;
+}
+
+#card4 {
+    grid-area: 3 / 4 / span 7 / span 1;
+}
+
+#card5 {
+    grid-area: 3 / 5 / span 7 / span 1;
+}
+
+#card6 {
+    grid-area: 11 / 1 / span 7 / span 1;
+}
+
+#card7 {
+    grid-area: 11 / 2 / span 7 / span 1;
+}
+
+#card8 {
+    grid-area: 11 / 3 / span 7 / span 1;
+}
+
+#card9 {
+    grid-area: 11 / 4 / span 7 / span 1;
+}
+
+#card10 {
+    grid-area: 11 / 5 / span 7 / span 1;
+}
 .experience {
     grid-area: 3 / 1 / span 1 / span 12;
 
