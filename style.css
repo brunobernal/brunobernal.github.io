@@ -216,60 +216,83 @@ section {
     grid-gap: 10px;
 }
 
-.about .card {
-    border: 1px solid black;
+.card {
     border-radius: 10px;
     margin: 0 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    transition: all 0.5s;
 }
 
-.about .card > p {
+.card:hover {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.card > p {
     margin-top: 10px;
 }
 
+.card > h3 {
+    margin-top: 10px;
+}
+
+
+
 #card1 {
     grid-area: 3 / 1 / span 7 / span 1;
-    align-items: center;
+    
 }
+
 
 #card2 {
     grid-area: 3 / 2 / span 7 / span 1;
     align-items: center;
+    
 }
 
 #card3 {
     grid-area: 3 / 3 / span 7 / span 1;
+    align-items: center;
 }
 
 #card4 {
     grid-area: 3 / 4 / span 7 / span 1;
+    align-items: center;
 }
 
 #card5 {
     grid-area: 3 / 5 / span 7 / span 1;
 }
 
+
 #card6 {
     grid-area: 11 / 1 / span 7 / span 1;
+    align-items: center;
 }
 
 #card7 {
     grid-area: 11 / 2 / span 7 / span 1;
+    align-items: center;
 }
+
 
 #card8 {
     grid-area: 11 / 3 / span 7 / span 1;
+    align-items: center;
 }
 
 #card9 {
     grid-area: 11 / 4 / span 7 / span 1;
+    
 }
+
 
 #card10 {
     grid-area: 11 / 5 / span 7 / span 1;
+    align-items: center;
 }
 .experience {
     grid-area: 3 / 1 / span 1 / span 12;
@@ -278,10 +301,76 @@ section {
 
 .skills {
     grid-area: 4 / 1 / span 1 / span 12;
+    display: grid;
+    grid-template: repeat(20, 1fr) /  repeat(5, 1fr);
+    grid-gap: 10px;
+    
+}
+
+
+
+#skill1 {
+    grid-area: 3 / 1 / span 7 / span 1;
+    align-items: center;
+    
+}
+
+
+#skill2 {
+    grid-area: 3 / 2 / span 7 / span 1;
+    align-items: center;
+    
+}
+
+#skill3 {
+    grid-area: 3 / 3 / span 7 / span 1;
+    align-items: center;
+}
+
+#skill4 {
+    grid-area: 3 / 4 / span 7 / span 1;
+    align-items: center;
+}
+
+#skill5 {
+    grid-area: 3 / 5 / span 7 / span 1;
+    align-items: center;
+}
+
+
+#skill6 {
+    grid-area: 11 / 1 / span 7 / span 1;
+    align-items: center;
+}
+
+#skill7 {
+    grid-area: 11 / 2 / span 7 / span 1;
+    align-items: center;
+}
+
+
+#skill8 {
+    grid-area: 11 / 3 / span 7 / span 1;
+    align-items: center;
+}
+
+#skill9 {
+    grid-area: 11 / 4 / span 7 / span 1;
+    align-items: center;
+    
+}
+
+
+#skill10 {
+    grid-area: 11 / 5 / span 7 / span 1;
+    align-items: center;
 }
 
 .contact {
     grid-area: 5 / 1 / span 1 / span 12;
+    display: grid;
+    grid-template: repeat(30, 1fr) / 1fr 1fr;
+    grid-gap: 20px;
 }
 
 
