@@ -7,11 +7,13 @@
 
 body {
     color: #363636;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: 18px;
-    background-image: url(./assets/images/backgroundpattern.jpg);
+    background-image: url(./assets/images/backgroundPattern2.png);
 
 }
+
+
 
 header {
     width: 75%;
@@ -23,9 +25,14 @@ header {
     background-image: linear-gradient(to top, rgba(255,255,255,0),rgba(255,255,255,0.1),rgba(255,255,255,0.2),rgba(255,255,255,0.3),rgba(255,255,255,0.4), rgba(255,255,255,0.5),rgba(255,255,255,0.6),rgba(255,255,255,0.7),rgba(255,255,255,0.8), rgba(255,255,255,0.80),rgba(255,255,255,0.80), rgba(255,255,255,0.8),rgba(255,255,255,0.7),rgba(255,255,255,0.6),rgba(255,255,255,0.5),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0.2), rgba(255,255,255,0.1), rgba(255,255,255,0));
 }
 
+header ul {
+    position: absolute;
+    right: 0;
+}
+
+
 header ul a {
     width: 100%;
-    height: 100%;
     text-align: center;
     margin: 40px auto;
     transition: font-size 1s, transform 0.2s, color 2s;
@@ -55,12 +62,15 @@ a:active {
 
 .logo {
     width: 10%;
+    position: absolute;
+    left: 0;
 }
 
 .logo a {
     float: left;
     padding: 25px 50px;
     transition: transform 1s, color 1s;
+    height: 100px;
 }
 
 .logo a:hover {
@@ -78,32 +88,10 @@ a:active {
 }
 
 
-.flags {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-left: 20px ;
-}
-
-.flags a {
-    margin-left: 10px;
-    
-}
-
-.flags a img{
-    transition: transform 0.5s;
-}
-
-.flags a img:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transform: rotate(360deg) ;
-    
-}
-
 header ul {
     display: flex;
     list-style-type: none;
+    float: right;
     width: 60%;
     justify-content: space-evenly;
     margin-right: 30px;
@@ -170,15 +158,14 @@ section {
 }
 
 .home .profilePicture img {
-    border-radius: 50%;
-    border: 5px solid #363636;
-    width: 100%;
+
+    width: 130%;
     transition: width 2s, border-radius 2s;
 }
 .home .profilePicture img:hover {
     border-color: black;
-    width: 110%;
-    border-radius: 0%;
+    width: 140%;
+    border-radius: 10%;
 
 }
 
@@ -262,6 +249,7 @@ section {
 
 #card1 {
     grid-area: 3 / 1 / span 7 / span 1;
+
     
 }
 
@@ -284,12 +272,14 @@ section {
 
 #card5 {
     grid-area: 3 / 5 / span 7 / span 1;
+    
 }
 
 
 #card6 {
     grid-area: 11 / 1 / span 7 / span 1;
     align-items: center;
+   
 }
 
 #card7 {
@@ -305,19 +295,160 @@ section {
 
 #card9 {
     grid-area: 11 / 4 / span 7 / span 1;
-    
+    align-items: center;
 }
 
 
 #card10 {
     grid-area: 11 / 5 / span 7 / span 1;
     align-items: center;
+    
 }
 .experience {
     grid-area: 3 / 2 / span 1 / span 10;
+    display: grid;
+    grid-template: repeat(50, 1fr) / repeat(50, 1fr);
 
 }
 
+.experienceTopics {
+    grid-area: 8 / 14 / span 1 / span 24;
+    
+
+}
+
+.experienceList {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    border-radius: 5px;
+}
+
+.experienceList  li{
+    padding: 10px 40px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+
+
+.experienceList  li:hover{
+    list-style-type: none;
+    font-size: 1.2rem;
+    color: black;
+    border: 1px solid #363636;
+    
+}
+
+.experienceItem {
+    background-color: white;
+    
+}
+
+
+
+.experienceItem h4{
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+.experienceItem li{
+    font-size: 1rem;
+
+}
+
+.academicItem {
+    background-color: white;
+    z-index: -1;
+}
+
+
+
+.academicItem h4{
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+
+.especializationItem {
+    background-color: white;
+    z-index: -1;
+    
+}
+
+
+
+.especializationItem h4{
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+
+
+#experience1 {
+    grid-area: 15 / 5 / span 1 / span 12;
+}
+
+#experience2 {
+    grid-area: 15 / 20 / span 1 / span 12;
+}
+
+#experience3 {
+    grid-area: 15 / 35 / span 1 / span 12;
+    
+}
+
+#experience4 {
+    grid-area: 22 / 5 / span 22 / span 12;
+    
+}
+
+#experience5 {
+    grid-area: 22 / 20 / span 22 / span 12;
+    
+}
+
+#experience6 {
+    grid-area: 22 / 35 / span 22 / span 12;
+}
+
+#academic1{
+    grid-area: 15 / 5 / span 1 / span 12;
+}
+
+
+#academic2 {
+    grid-area: 15 / 20 / span 1 / span 12;
+}
+
+#academic3 {
+    grid-area: 15 / 35 / span 1 / span 12;
+}
+
+#espec1 {
+    grid-area: 15 / 5 / span 1 / span 12;
+}
+
+#espec2 {
+    grid-area: 15 / 20 / span 1 / span 12;
+}
+
+#espec3 {
+    grid-area: 15 / 35 / span 1 / span 12;
+    background-color: yellow;
+}
+
+#espec4 {
+    grid-area: 22 / 5 / span 22 / span 12;
+}
+
+#espec5 {
+    grid-area: 22 / 20 / span 22 / span 12;
+}
+
+#espec6 {
+    grid-area: 22 / 35 / span 22 / span 12;
+}
 .skills {
     grid-area: 4 / 2 / span 1 / span 10;
     display: grid;
@@ -403,7 +534,7 @@ section {
 
 
 .phone:hover, .instagramContact:hover {
-    color: black;
+    color: rgb(130, 214, 144);
     font-size: 1.2rem;
     font-weight: 900;
 }
