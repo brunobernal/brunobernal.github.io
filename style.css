@@ -1107,6 +1107,7 @@ footer {
 .academicItem {
     background-color: white;
     z-index: -1;
+    font-size: 0.8rem;
 }
 
 
@@ -1136,15 +1137,15 @@ footer {
 
 
 #experience1 {
-    grid-area: 15 / 5 / span 1 / span 12;
+    grid-area: 15 / 5 / span 1 / span 18;
 }
 
 #experience2 {
-    grid-area: 15 / 20 / span 1 / span 12;
+    grid-area: 15 / 28 / span 1 / span 18;
 }
 
 #experience3 {
-    grid-area: 15 / 35 / span 1 / span 12;
+    grid-area: 15 / 50 / span 1 / span 12;
     
 }
 
@@ -1180,7 +1181,7 @@ footer {
 }
 
 #espec2 {
-    grid-area: 15 / 20 / span 1 / span 12;
+    grid-area: 15 / 25 / span 1 / span 12;
 }
 
 #espec3 {
