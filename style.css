@@ -900,14 +900,14 @@ footer {
 
     header {
         width: 74%;
-        margin-left: 0;
+        margin-left: 20px;
         display: flex;
         
     }
     
     
     header ul {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         
     }
 
