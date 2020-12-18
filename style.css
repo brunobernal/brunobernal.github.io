@@ -1088,13 +1088,15 @@ footer {
 
     
 }
-
+.experienceItem h3 {
+    font-size: 0.9rem;
+}
 
 
 .experienceItem h4{
     font-weight: lighter;
     margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .experienceItem li{
